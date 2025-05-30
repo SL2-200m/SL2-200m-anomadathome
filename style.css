@@ -1,0 +1,345 @@
+/* Basic Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #333;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s ease-in-out;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Header */
+.site-header {
+    background-color: #fff;
+    padding: 1em 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 2em;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.branding h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.branding h1 a {
+    text-decoration: none;
+    color: #333;
+}
+
+.main-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-navigation li {
+    margin-left: 20px;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+.main-navigation a:hover {
+    color: #0073aa;
+}
+
+#menu-toggle {
+    display: none; /* Hidden by default, shown on mobile */
+    background: #333;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Main Content Area */
+.main-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allow sidebar to wrap on smaller screens */
+    gap: 30px; /* Space between main and sidebar */
+}
+
+.site-main {
+    flex: 3; /* Main content takes more space */
+    min-width: 0; /* Prevent overflow issues with flex items */
+}
+
+.widget-area {
+    flex: 1; /* Sidebar takes less space */
+    min-width: 0;
+}
+
+/* Posts */
+.post {
+    background-color: #fff;
+    margin-bottom: 2em;
+    padding: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.entry-header {
+    margin-bottom: 1em;
+}
+
+.entry-title {
+    font-size: 1.8em;
+    margin-bottom: 0.2em;
+}
+
+.entry-title a {
+    text-decoration: none;
+    color: #222;
+}
+
+.entry-title a:hover {
+    color: #0073aa;
+}
+
+.entry-meta {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.entry-meta span {
+    margin-right: 10px;
+}
+
+.entry-meta a {
+    color: #555;
+    text-decoration: none;
+}
+.entry-meta a:hover {
+    text-decoration: underline;
+}
+
+.entry-content p {
+    margin-bottom: 1em;
+}
+
+.entry-content a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.entry-content a:hover {
+    text-decoration: underline;
+}
+
+.entry-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em auto; /* Center images and add some space */
+    border-radius: 3px;
+}
+
+.entry-content figure {
+    margin: 1.5em 0;
+}
+.entry-content figure img {
+    margin-bottom: 0.5em;
+}
+
+.entry-content figcaption {
+    font-size: 0.9em;
+    color: #555;
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.5em;
+}
+
+.featured-image img {
+    margin-bottom: 1em;
+}
+
+/* Sidebar Widgets */
+.widget {
+    background-color: #fff;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.widget-title {
+    font-size: 1.2em;
+    margin-bottom: 0.8em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5em;
+}
+
+.widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.widget ul li {
+    margin-bottom: 0.5em;
+}
+
+.widget ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.widget ul li a:hover {
+    color: #0073aa;
+}
+
+.widget_search .search-field {
+    width: calc(100% - 80px); /* Adjust based on button width */
+    padding: 0.5em;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.widget_search .search-submit {
+    padding: 0.5em 1em;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.widget_search .search-submit:hover {
+    background-color: #005a87;
+}
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+
+/* Posts Navigation */
+.posts-navigation {
+    margin: 2em 0;
+    padding: 1em;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.posts-navigation a {
+    text-decoration: none;
+    color: #0073aa;
+    font-weight: bold;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 2em 0;
+    margin-top: 2em;
+    background-color: #333;
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+.site-footer a:hover {
+    text-decoration: underline;
+}
+.site-footer .privacy-cookies {
+    margin-top: 0.5em;
+    font-size: 0.9em;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .branding {
+        margin-bottom: 10px;
+    }
+
+    #menu-toggle {
+        display: block; /* Show hamburger button */
+        margin-bottom: 10px;
+    }
+
+    .main-navigation ul {
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column;
+        width: 100%;
+    }
+    .main-navigation ul.toggled-on {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .main-navigation li {
+        margin-left: 0;
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+    .main-navigation li:last-child {
+        border-bottom: none;
+    }
+
+    .main-navigation a {
+        display: block;
+        padding: 0.8em 0;
+    }
+
+    .main-wrapper {
+        flex-direction: column; /* Stack main and sidebar */
+    }
+
+    .site-main,
+    .widget-area {
+        width: 100%;
+        flex: none; /* Reset flex properties */
+    }
+}
